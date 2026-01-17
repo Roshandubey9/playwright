@@ -5,6 +5,10 @@ pipeline {
         nodejs 'NodeJS'
     }
 
+    environment {
+        PLAYWRIGHT_BROWSERS_PATH = "0"
+    }
+
     stages {
 
         stage('Checkout Code') {
