@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS'   // Jenkins me NodeJS tool ka naam
+        nodejs 'NodeJS'
     }
 
     stages {
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 bat '''
                 npm install
-                npx playwright install
+                npx playwright install --with-deps
                 '''
             }
         }
