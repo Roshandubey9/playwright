@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        PLAYWRIGHT_BROWSERS_PATH = "0"
+        PLAYWRIGHT_BROWSERS_PATH = '0'
     }
 
     stages {
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 bat '''
                 npm install
-                npx playwright install --with-deps
+                npx playwright install chromium
                 '''
             }
         }
